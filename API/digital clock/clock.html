@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #clock {
+        font-size: 150px;
+        width: 750px;
+        margin: 250px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock"></div>
+    <!-- <input type="button" value="start" onclick="setInterval">;
+    <input type="button" value="stop" onclick="clearInterval(fz)"> -->
+    <!-- <button value="start" onclick="setInterval">start</button>
+    <button value="stop" onclick="clearInterval(fz)">stop</button>
+    <button onclick="reset">reset</button> -->
+
+    <script>
+      
+     var fz= setInterval(function(showTime){
+    showTime();
+     
+      function showTime() {
+        let time = new Date();
+        let hours = time.getHours();
+        let mins = time.getMinutes();
+        let secs = time.getSeconds();
+       let am_pm= "am";
+
+        if (hours > 12) {
+          hours -= 12;
+          am_pm = "PM";
+        }
+
+        if (hours == 0) {
+          hours = 12;
+          am_pm = "AM";
+        }
+        hours = hours < 10 ? "0" + hours : hours;
+        mins = mins < 10 ? "0" + mins : mins;
+        secs = secs < 10 ? "0" + secs : secs;
+
+        let currentTime = hours + ":" + mins + ":" + secs + am_pm;
+       
+        document.getElementById("clock").innerHTML = currentTime;
+      }
+    })
+      // showTime();
+
+      function reset(){
+        document.getElementById('clocked').reset();
+      }
+    </script>
+  </body>
+</html>

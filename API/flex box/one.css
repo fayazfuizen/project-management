@@ -1,0 +1,40 @@
+
+.container {
+    /* background-color: rgb(236, 224, 224); */
+    color:black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container ul{
+    height: 250px;
+    width: 300px;
+    border:2px solid brown ;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+} 
+/* .lists{
+    display: block;
+    height:200px ;
+    width: 250px;
+    background-color: aqua;
+    border:1px solid blueviolet ;
+   
+
+
+} */
+.container ul  li{
+    margin-top: 20px;
+    /* padding:10px ; */
+/* justify-content: center; */
+list-style: none;
+text-align-last: center;
+/* margin-top:30px; */
+}
+img{
+    height: 70px;
+    width: 70px;
+    margin-right:50px ;
+    margin-top:20px ;
+}
