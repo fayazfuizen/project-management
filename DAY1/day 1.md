@@ -2,4 +2,4 @@
 #Git environement setup
 #create account setup
 #git commands
-#plush files into git
+#push files into git
